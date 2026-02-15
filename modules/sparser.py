@@ -99,4 +99,5 @@ class DataParser:
     
     def calculate_total(self, items: List[ReceiptItem]) -> float:
         """Calculate total from items"""
+
         return sum(item.price for item in items)
