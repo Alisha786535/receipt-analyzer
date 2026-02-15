@@ -1,5 +1,5 @@
 from typing import Dict, List
-from modules.data_sparser import ReceiptItem
+from modules.data_parser import ReceiptItem
 import logging
 
 logger = logging.getLogger(__name__)
@@ -105,4 +105,5 @@ class ExpenseCategorizer:
         totals = {}
         for category, items in categorized.items():
             totals[category] = sum(item.price for item in items)
+
         return totals
