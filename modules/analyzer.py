@@ -1,5 +1,5 @@
 from typing import Dict, List, Tuple
-from modules.data_sparser import ReceiptItem
+from modules.data_parser import ReceiptItem
 import numpy as np
 import logging
 
@@ -102,4 +102,5 @@ class SpendingAnalyzer:
         totals = {}
         for category, items in categorized.items():
             totals[category] = sum(item.price for item in items)
+
         return totals
